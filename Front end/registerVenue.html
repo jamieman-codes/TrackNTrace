@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+        <title>Track and Trace</title>
+        <script type="text/javascript" src="scripts.js"></script>
+	</head>
+
+	<body>
+		  <main>
+                <ul>
+					<li><a href="index.html">Home</a></li>
+                    <li><a href="user.html">Users</a></li>
+                    <li><a class="active" href="venues.html">Venues</a></li>
+                </ul>
+                <h1>Register Venue</h1>
+                <button onclick="document.location='venues.html'">Back</button>
+                <form id="registerVenue" action="javascript:;" onsubmit="submitNewVenue()">
+                    <fieldset>
+                        <legend>Venue Details</legend>
+                        <label for="name">Venue name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="address">Address:</label><br>
+                        <textarea id="address" name="address" rows="5" cols="30" required></textarea><br>
+                        <label for="maxCap">Max Capcity:</label><br>
+                        <input type="number" id="maxCap" name="maxCap" min="1" required><br><br>
+                        <input type="submit" value="Submit"><br>
+                      <div id="output"></div>
+                    </fieldset>
+                </form>
+        </main>
+	</body>
+</html>

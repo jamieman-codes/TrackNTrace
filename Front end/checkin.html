@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+        <title>Track and Trace</title>
+        <script type="text/javascript" src="scripts.js"></script>
+	</head>
+
+	<body onload="loadData('https://trackandtracefun.azurewebsites.net/api/GetUsers', 'users', true, 'usersForm'); loadData('https://trackandtracefun.azurewebsites.net/api/GetVenues', 'venues', false, 'venuesForm')">
+		  <main>
+                <ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a class="active" href="user.html">Users</a></li>
+					<li><a href="venues.html">Venues</a></li>
+                </ul>
+				<h1>User Page</h1>
+                <button onclick="document.location='user.html'">Back</button>
+                <form id="checkIn" action="javascript:;" onsubmit="submitNewUserCheckin()">
+                    <fieldset>
+                        <legend>Check In</legend>
+                        <label for="venues">Venue</label><br>
+                        <div id="venuesForm"></div><br>
+                        <label for="users">Users</label><br>
+                        <div id="usersForm"></div>
+                        <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+                      <input type="submit" value="Check In"><br>
+                      <div id="output"></div>
+                    </fieldset>
+                </form>
+            </main>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+        <title>Track and Trace</title>
+        <script type="text/javascript" src="scripts.js"></script>
+	</head>
+
+	<body onload="loadData('https://trackandtracefun.azurewebsites.net/api/GetUsers', 'users', false, 'usersForm')">
+		  <main>
+                <ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a class="active" href="user.html">Users</a></li>
+					<li><a href="venues.html">Venues</a></li>
+                </ul>
+				<h1>User Page</h1>
+                <button onclick="document.location='user.html'">Back</button>
+                <form id="reportTest" action="javascript:;" onsubmit="submitNewTest()">
+                    <fieldset>
+                        <legend>Report Positive Test</legend>
+                        <label for="users">Users</label><br>
+                        <div id="usersForm"></div><br>
+                        <label for="testDate">When did you test Positive?</label><br>
+                        <input type="date" id="testDate" name="testDate" required><br><br>
+                        <input type="submit" value="Report"><br>
+                        <div id="output"></div>
+                    </fieldset>
+                </form>
+	</body>
+</html>
